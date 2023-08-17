@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"id": "cameramod",
+	"version": "${version}",
+	"name": "CamerMod",
+	"description": "You can change cameraMode as old carpetMod(Minecarft version <= 1.15.2)",
+	"authors": [
+		"SkyDynamic"
+	],
+	"license": "MIT",
+	"icon": "assets/camera/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.skydynamic.camera.cameraMod"
+		]
+	},
+	"mixins": [
+		"camera.mixins.json"
+	],
+	"depends": {
+		"minecraft": "${minecraft_dependency}"
+	}
+}
