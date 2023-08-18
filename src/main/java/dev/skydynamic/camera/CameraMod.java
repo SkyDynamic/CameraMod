@@ -14,7 +14,7 @@ public class CameraMod implements ModInitializer {
     public void onInitialize() {
 
         //#if MC>=11904
-        //$$ CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> new cameraCommand().registerCameraCommand(dispatcher));
+        //$$ CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> new CameraCommand().registerCameraCommand(dispatcher));
         //#else
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> new CameraCommand().registerCameraCommand(dispatcher));
         //#endifs
