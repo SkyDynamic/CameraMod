@@ -4,7 +4,7 @@ on:
 
 jobs:
   build:
-    uses: ./.github/workflows/ci.yml
+    uses: ./.github/workflows/CI.yml
     with:
       target_subproject: ${{ github.event.inputs.target_subproject }}
       release: true
