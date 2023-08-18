@@ -77,11 +77,11 @@ String versionSuffix = ''
 // https://docs.github.com/en/actions/learn-github-actions/environment-variables#default-environment-variables
 if (System.getenv("BUILD_RELEASE") != "true") {
 	String buildNumber = System.getenv("BUILD_ID")
-	versionSuffix += buildNumber != null ? ('+build.' + buildNumber) : '-SHAPSHOT'
+	versionSuffix += buildNumber != null ? ('+build.' + buildNumber) : ''
 }
-String fullModVersion = project.mod_version + versionSuffix
+String fullModVersion = project.mod_version + '-v' + new Date().format('yyMMdd') +versionSuffix
 
-version = 'v' + fullModVersion
+version = '' + fullModVersion
 group = project.maven_group
 archivesBaseName = project.archives_base_name + '-mc' + project.minecraft_version
 
