@@ -21,15 +21,20 @@ public class CameraCommand {
 
     private static final ConcurrentHashMap<String, playerEntityCameraData> playerCameraPosDataHashMap = new ConcurrentHashMap<>();
 
+    public static void clearCache(){
+        playerCameraPosDataHashMap.clear();
+    }
+
+
     public void registerCameraCommand(CommandDispatcher<ServerCommandSource> dispatcher)
     {
         dispatcher.register(
-            literal("c").executes(
+            literal("c").requires(s -> s.getEntity() instanceof ServerPlayerEntity).executes(
                 (c) -> cameraModeExecute(c.getSource())
             )
         );
         dispatcher.register(
-            literal("s").executes(
+            literal("s").requires(s -> s.getEntity() instanceof ServerPlayerEntity).executes(
                 (s) -> survivalModeExecute(s.getSource())
             )
         );
@@ -72,6 +77,12 @@ public class CameraCommand {
     {
         try {
             ServerPlayerEntity player = source.getPlayer();
+            if (!playerCameraPosDataHashMap.containsKey(player.getGameProfile().getName())
+                || player.interactionManager.getGameMode() != GameMode.SURVIVAL) {
+                changePlayerGameMode(player, GameMode.SURVIVAL);
+                playerEffect(true, player);
+                return 1;
+            }
             playerEntityCameraData originData = playerCameraPosDataHashMap.get(player.getName().getString());
             Vec3d Pos = originData.Pos;
             player.teleport(originData.World, Pos.x, Pos.y, Pos.z, originData.Yaw, originData.Pitch);
