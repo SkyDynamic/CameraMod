@@ -77,8 +77,8 @@ public class CameraCommand {
     {
         try {
             ServerPlayerEntity player = source.getPlayer();
-            if (!playerCameraPosDataHashMap.containsKey(player.getGameProfile().getName())
-                || player.interactionManager.getGameMode() != GameMode.SURVIVAL) {
+            if (!playerCameraPosDataHashMap.containsKey(player.getName().getString())
+                && player.interactionManager.getGameMode() != GameMode.SURVIVAL) {
                 changePlayerGameMode(player, GameMode.SURVIVAL);
                 playerEffect(true, player);
                 return 1;
