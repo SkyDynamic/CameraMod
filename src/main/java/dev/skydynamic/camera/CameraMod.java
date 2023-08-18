@@ -6,9 +6,9 @@ import net.fabricmc.api.ModInitializer;
 //#else
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
 //#endif
-import dev.skydynamic.camera.commands.cameraCommand;
+import dev.skydynamic.camera.commands.CameraCommand;
 
-public class cameraMod implements ModInitializer {
+public class CameraMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
@@ -16,7 +16,7 @@ public class cameraMod implements ModInitializer {
         //#if MC>=11904
         //$$ CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> new cameraCommand().registerCameraCommand(dispatcher));
         //#else
-        CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> new cameraCommand().registerCameraCommand(dispatcher));
+        CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> new CameraCommand().registerCameraCommand(dispatcher));
         //#endifs
 
     }

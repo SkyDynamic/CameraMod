@@ -16,7 +16,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"dev.skydynamic.camera.cameraMod"
+			"dev.skydynamic.camera.CameraMod"
 		]
 	},
 	"mixins": [
