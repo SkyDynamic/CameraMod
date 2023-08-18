@@ -4,7 +4,7 @@ plugins {
 	id 'com.replaymod.preprocess' version 'SNAPSHOT'
 }
 
-println projectDir.toPath().resolve("fabricWrapper/build/libs").deleteDir()
+projectDir.toPath().resolve("fabricWrapper/build/libs").deleteDir()
 
 preprocess {
 	def mc116 = createNode('1.16.5', 1_16_5, 'yarn')

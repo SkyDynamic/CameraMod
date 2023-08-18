@@ -7,11 +7,15 @@
 	"authors": [
 		"SkyDynamic"
 	],
+	"contact": {
+		"issues": "https://github.com/SkyDynamic/CameraMod/issues",
+		"sources": "https://github.com/SkyDynamic/CameraMod"
+	},
 	"license": "MIT",
 	"icon": "assets/camera/icon.png",
 	"environment": "*",
 	"depends": {
-		"minecraft": "${minecraft_dependency}"
+		"minecraft": ["1.16.4", "1.16.5", "1.17.1", "1.18.x", "1.19.2", "1.20.x"]
 	},
-	"jars": "${sub_jars}"
+	"jars": ${sub_jars}
 }

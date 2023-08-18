@@ -7,6 +7,10 @@
 	"authors": [
 		"SkyDynamic"
 	],
+	"contact": {
+		"issues": "https://github.com/SkyDynamic/CameraMod/issues",
+		"sources": "https://github.com/SkyDynamic/CameraMod"
+	},
 	"license": "MIT",
 	"icon": "assets/camera/icon.png",
 	"environment": "*",

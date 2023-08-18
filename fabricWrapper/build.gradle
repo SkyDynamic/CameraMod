@@ -70,7 +70,6 @@ processResources {
         def valueMap = [
                 "name": project.mod_name,
                 "version": project.version,
-                "minecraft_dependency": new JsonBuilder(mc_condition),
                 "sub_jars": new JsonBuilder(jars).toPrettyString()
         ]
         expand valueMap
