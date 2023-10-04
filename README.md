@@ -1,5 +1,9 @@
 # Camera Mod
 
+## Download / 下载
+- [Modrinth](https://modrinth.com/mod/cameramod)
+- [Github Action (Dev)](https://github.com/SkyDynamic/CameraMod/actions)
+
 ## Usage / 用法
 `/c` Change your gamemode to spectator and record current position  
 `/s` Change your gamemode to survival and teleport to you position when execute `/c` command
@@ -9,7 +13,7 @@
 `/s` 将您的模式更改为生存并会到执行`/c`指令时的位置
 * 如果执行了`/c`之后服务器崩溃了, 那么您再次进入服务器后执行`/s`将会在原地更改模式
 
-## 支持版本
+## Supported Vrsions / 支持版本
 |         游戏版本         | 开发状态 |
 |:--------------------:|:----:|
 |        1.20.1        |  ✔   |
